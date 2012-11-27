@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.3.21)  26 NOV 2012 19:32
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.3.21)  27 NOV 2012 21:05
 entering extended mode
  Source specials enabled.
  %&-line parsing enabled.
@@ -296,7 +296,11 @@ LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> OMS/plsy/b/n on input line 346.
 ) (./document.aux
-(./dziedzina.aux) (./technologie.aux))
+(./dziedzina.aux) (./technologie.aux
+
+LaTeX Warning: Label `RozporzadzenieFaktury' multiply defined.
+
+))
 \openout1 = `document.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -365,29 +369,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 277--278
 [8] [9] [10] [11]) [12]
 \openout2 = `technologie.aux'.
 
- (./technologie.tex) [13
+ (./technologie.tex [13
 
 
-] (./document.aux
-(./dziedzina.aux) (./technologie.aux)) ) 
+]
+Overfull \hbox (30.79173pt too wide) in paragraph at lines 58--71
+ [][][] 
+ []
+
+[14] [15] [16]) [17] (./document.aux (./dziedzina.aux) (./technologie.aux))
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 688 strings out of 493848
- 7762 string characters out of 1152823
+ 693 strings out of 493848
+ 7856 string characters out of 1152823
  60261 words of memory out of 3000000
- 3986 multiletter control sequences out of 15000+50000
+ 3991 multiletter control sequences out of 15000+50000
  10387 words of font info for 31 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 25i,4n,24p,306b,175s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvi
-ps/pl/plms.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/pl/plmi.enc}{/usr/shar
-e/texmf-texlive/fonts/enc/dvips/pl/plrm.enc}</usr/share/texmf-texlive/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/p
-l/plbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plmi12.pfb></usr/s
-hare/texmf-texlive/fonts/type1/public/pl/plr12.pfb></usr/share/texmf-texlive/fo
-nts/type1/public/pl/plsy10.pfb>
-Output written on document.pdf (13 pages, 72843 bytes).
+ 25i,8n,24p,306b,214s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc/dvips/pl/plms.enc}{/usr/share/texmf-texli
+ve/fonts/enc/dvips/pl/plmi.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/pl/plr
+m.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/share/texmf-texlive/fonts/type1/public/pl/plbx12.pfb></usr/share/texmf-texlive
+/fonts/type1/public/pl/plmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/
+pl/plr12.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plsy10.pfb>
+Output written on document.pdf (17 pages, 82453 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 80 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
