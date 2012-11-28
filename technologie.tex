@@ -13,8 +13,43 @@ miejsca klasycznym aplikacjom. Nie dziwi więc niekogo fakt że taka aplikacja t
 sobą wiele technologii. Niemal w każdej aplikacji tego tymu możemy natrafić na bazę danych, kontener servletów
 czy też model. W najbliższych rozdziałach postaram się przybliżyć klika technologii obecnie stowsowanych do 
 towrzenia aplikacji internetowych. Zaczniemy od najniższego poziomu czyli od bazy danych i stopniowo 
-przejdziemy do ostatecznego widoku aplikacji, czyli tego z czego korzysta użytkownik.
+przejdziemy do ostatecznego widoku aplikacji, czyli tego z czego korzysta użytkownik. Zanim jednak zaczniemy 
+opisywać technologie należy wspomniech o architekturze tego typu aplikacji.
 
+\subsection{Architektura trójwarstwowa}
+Jest arcitekturą typu klient serwer. Aplikacja podzielona jest na warstwy co umożliwia łatwiejsze
+zarządzanie i modyfikacje programu. Dzięki temu możemy wprowadzać zmiany w jednenej z warstw bez konieczności
+modyfikacji w innych warstwach. Schemat tej architekrury został przedstawiony na rysunku \ref{architekturaTrojwarstwowaRysunek}.
+\begin{figure}[h]\centering
+
+\includegraphics[scale=0.5]{architekturaTrojwarstwowa.jpg}
+\caption{Schemat architektury trójwarstwowej}
+\label{architekturaTrojwarstwowaRysunek}
+\end{figure}
+\subsubsection{Warstwa danych}
+Służy do przechowywania, tworzenia zapytań i zarządzania danymi w aplikacji. Składa się z bazy danych oraz 
+modułów, bibliotek zapewniających programiście wygodne API. Spośród wielu rozwiązań dostępnych na rynku 
+ciekawym wydaje się open source'owy projekt jakim jest PostgreSQL. Natomiast aby możliwa była wygodna, szybka
+i bezpieczna współpraca z bazą danych należy się zastanowić nad narzędziem zapewniającym translację między 
+relacyjnym światem bazy danych a światem obiektowym. Przykładem takiego narzedzia może być framework Hibernate.
+\subsubsection{Warstwa logiki biznesowej}
+Warstwa odpowiedzialna za komunikację pomiędzy poszczególnymi warstwami ale również wykonuje obliczenia
+i przygotowuje odpowiedzi do warstwy prezentacji. Powinna również realizować całą logikie biznesową aplikacji.
+Warstwę tą można zrealizować przy pomocy szkieletu aplikacyjnego jakim jest ObjectLedge. Warstwa da zwraca
+również odpowiedzi do warstwy prezentacji. Jak wiadomo niemożliwe jest w takim przypadku
+stworzenie statycznej strony i jej wyświetlanie, ponieważ w aplikacji ciągle zachodzą pewne zmiany, które
+muszą mieć odzwiercedlenie w warstwie prezentacji. Należy zatem generować strony dynamicznie. 
+ Istnieje wiele
+narzędzi do generowania dynamicznych stron HTML. Jednym z takich narzedzi jest projekt open source o nazwie
+Velocity.
+
+\subsubsection{Warstwa prezentacji}
+
+Jedyna widoczna dla użytkownika warstwa. Daje mu możliwość dokonywania zmian w aplikacji oraz wyświetla
+informacje o aktualnym stanie w jakim aplikacja się znajduje. Powinna być prosta, przejrzysta a także 
+logiczna w obsłudze. W przypadku aplikacji internetowych zazwyczaj jest napisana z wykorzystaniem
+technik takich jak HTML, JavaScript oraz  w celu ułatwienie stosowane są różne biblioteki napisane 
+w JavaScripcie takie jak: Dojo czy JQuery.
 
 \subsection{PostgreSQL}
 Jak wszyscy wiemy w niemal każdej aplikacji mamy kontakt z danymi. Dane te są w różny sposób przetwarzane i 
@@ -71,6 +106,31 @@ nie stanowią problemów. Podstawowe ogrniczenia bazy danych to:
 \end{table}
 
 \subsection{Objectledge}
+Szkielet aplikacyjny umożliwiający tworzenie internetwych aplikacji w języku Java. Jest to projekt 
+oparty na technologii PicoContainera i wykorzystujący wstrzykiwanie zalażności. Składa się z kilku 
+modułów, które pozwalają na stworzenie pełnoprawnej aplikacji. ObjectLedge jest posiada licencję 
+typu open source dzięki czemu możemy wykorzystywać go do tworzenia własnego oprogramowania, z 
+zastrzeżeniem konieczności dołączenia informacji o prawach autorskich.
+\subsubsection{MVC}
+ObjectLedge wykorzystuje wzorzec projektowy MVC (Model Widok Kontroler). Moduł ten umożliwia oddzielenie 
+warstwy widoku od warstwy dostępu do danych i działania na nich. Model w ObjectLedge jest częścią 
+niewidoczną dla użytkownika, dostęp do niej ma jednynie programista tworzący aplikację. W większości 
+przypadków w tej części aplikacji dostaję się do bazy danych i dokonuje modyfikacji. Kolejną warstwą 
+jest Kontroler, jest on odpowiedzialny za przygotowywanie widoków oraz wykonywanie akcji zleconych 
+przez użytkownika. Implementacja tej części znajduję się w klasach ActionExecutorValve oraz 
+BuilderExecutorValve. Widok odpowiada za część aplikacji widoczną dla użytkownika. W ObjectLedge
+jest on tworzony przy pomocy klas dziedziczących po klasie Bulider oraz wykorzystując mechanizm szablonów
+taki jak np. Velocity.
+\subsubsection{Security}
+Moduł pozwalający na stworzenie zabazpieczeń w aplikacji. Zapewnia mechanizm autoryzacji oraz umożliwia 
+wprowadzenia podziału na różne grupy użytkowników aplikacji. Moduł ten operra się o zdefiniowanie potencjalnych
+użytkonikow aplikacji oraz ról jakie mogą posiadać. W zależności od zdefiniowanych w bazie danych ograniczeń
+przypisanych do konkretnego użytkownika ObjectLedge zezwala lub nie na wykonanie danej operacji.
+\subsubsection{Intake}
+Moduł ten pozwala na połączenie formularzy w widoku z klasami znajdującymi się w modelu. Dzięki temu
+możemy również sprawdzać czy dane wprowadzone przez użytkownika są poprawne. Sprawdzenie może odbyć się
+poprzez zdefiniowanie pewnych cech jakie powinny posiadać wprowadzone dane ale również możemy zdenifiować
+wyrażenia regularne jakie muszą spelniać dane zapisane przez użytkownika.
 \subsection{Hibernate}
 Hibernate jest narzędziem, które znacząco ułatwia pracę programiście pracującym z bazą danych, poprzez 
 umożliwienie mu mapowania obeitowo-relacyjnego. 
@@ -101,11 +161,35 @@ powiązania w modelu znajdującym się w aplikacji.
  Hibernate nie tylko pozwala nam w łatwy i przyjemny sposób zarządzać danymi w bazie danych ale również
 przyspiesza odwołania do bazy danych poprzez buforowanie.
 
-Hibernate daje możliwość odwzorowania w modelu aplikacji takich zależności jak kompozycje czy 
+Hibernate umożliwia torzenie zapytań na trzy różne sposoby. Pierwszym z nich jest używanie wbudowanego
+w Hibernate języka HQL, który składniowo jest podobny do standardowego SQL-a. Kolejnym sposobem wykonywania
+zapytań jest użyawnie do tego celu SQL-a, zaś ostatni ze sposobow dostępu do bazy danych to używanie 
+kryteriów.
+
+W Hibernate istnieją dwa sposoby łączenia bazy danych z modelem w języku java. Pierwszy ze sposobów to
+stworzenie na początku bazy danych a nastpnie na jej podstawie stowrzenie modelu w javie. Druga metoda jest 
+odwrotna czyli na początku tworzymy model w naszej aplikacji a następnie Hibernate generuje schemat
+bazy danych.
 \subsection{Ajax}
+Ajax jest to zbiór technik umożliwiających towrzenie stron, które swoim działaniem przypominają bardziej 
+aplikacje uruchamiane bezpośrednio na komputezrze użytkownika niż aplikacje internetowe. Po raz pierwszy
+technologia ta została wykorzystana w roku 2005 i wywołała spore zamieszanie na rynku. 
+ Główną zaletą jest 
+możliwość wprowadzania zmian w wyświetlanej stronie bez konieczności przeładowywania całego dokumentu. Nazwa
+Ajax to skrót od Asynchronous JavaScript and XML, sugeruje to że wymiana danych pomiędzy przeglądarką a 
+serwerem ma charakter asynchroniczny. Takie rozwiązanie powoduje że użytkownik nie musi czekać na odpowiedź
+z serwera po wykonaniu jakiejś, natomiast może sobie spokojnie dalej używać aplikacji.
+
+Ajax to właściwie zbiór już istniejących techlologii WWW, takich jak: HTML, CSS, XML, JavaScript. Połączenie
+tych dało nowe możliwości dla twórców stron WWW.
+ Ajax do komunikacji z serwerem używa obiektów XMLHttpRequest.
+
 \subsection{Velocity}
-\subsection{HTML}
+Jest to procesor szblonów umożliwiający tworzenie dynamicznych stron WWW. Projekt ten jest typu open source
+dzięki czemu możemy go używać w aplikacjach bez konieczności uiszczania opłat. Velocity wykorzystuje wzorzec
+MVC dzieki czemu mamy lepiej podzieloną aplikacje. 
 \subsection{JQuery}
+
 \subsection{Dojo}
 \newpage
 \begin{thebibliography}{szerokosc}

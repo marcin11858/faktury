@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.3.21)  27 NOV 2012 21:05
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.3.21)  28 NOV 2012 21:38
 entering extended mode
  Source specials enabled.
  %&-line parsing enabled.
@@ -295,6 +295,31 @@ LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
 (Font)                  OML/cmm/b/it --> OML/plm/b/it on input line 346.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/cmsy/b/n --> OMS/plsy/b/n on input line 346.
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count87
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
 ) (./document.aux
 (./dziedzina.aux) (./technologie.aux
 
@@ -303,20 +328,33 @@ LaTeX Warning: Label `RozporzadzenieFaktury' multiply defined.
 ))
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 8.
+LaTeX Font Info:    ... okay on input line 8.
+ (/usr/share/texmf/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count88
+\scratchdimen=\dimen105
+\scratchbox=\box26
+\nofMPsegments=\count89
+\nofMParguments=\count90
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count91
+\MPscratchDim=\dimen106
+\MPnumerator=\count92
+\everyMPtoPDFconversion=\toks18
+)
 \openout2 = `dziedzina.aux'.
 
  (./dziedzina.tex [1
@@ -369,24 +407,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 277--278
 [8] [9] [10] [11]) [12]
 \openout2 = `technologie.aux'.
 
- (./technologie.tex [13
+ (./technologie.tex
+<architekturaTrojwarstwowa.jpg, id=44, 261.97874pt x 250.9375pt>
+File: architekturaTrojwarstwowa.jpg Graphic file (type jpg)
+
+<use architekturaTrojwarstwowa.jpg> [13
 
 
-]
-Overfull \hbox (30.79173pt too wide) in paragraph at lines 58--71
+ <./architekturaTrojwarstwowa.jpg>]
+Overfull \hbox (0.61192pt too wide) in paragraph at lines 36--45
+\OT4/cmr/m/n/12 pre-zen-ta-cji. Po-win-na rów-nie» re-ali-zo-wa¢ ca-ª¡ lo-gi-ki
+e biz-ne-so-w¡ apli-ka-cji. War-
+ []
+
+[14]
+Overfull \hbox (30.79173pt too wide) in paragraph at lines 93--106
  [][][] 
  []
 
-[14] [15] [16]) [17] (./document.aux (./dziedzina.aux) (./technologie.aux))
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15] [16] [17]
+Overfull \hbox (10.23196pt too wide) in paragraph at lines 188--191
+[]\OT4/cmr/m/n/12 Jest to pro-ce-sor szblo-nów umo»-li-wia-j¡-cy two-rze-nie dy
+-na-micz-nych stron WWW.
+ []
+
+[18] [19]) [20] (./document.aux (./dziedzina.aux) (./technologie.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 693 strings out of 493848
- 7856 string characters out of 1152823
- 60261 words of memory out of 3000000
- 3991 multiletter control sequences out of 15000+50000
+ 1377 strings out of 493848
+ 16837 string characters out of 1152823
+ 72181 words of memory out of 3000000
+ 4648 multiletter control sequences out of 15000+50000
  10387 words of font info for 31 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  25i,8n,24p,306b,214s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -396,9 +453,9 @@ m.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /share/texmf-texlive/fonts/type1/public/pl/plbx12.pfb></usr/share/texmf-texlive
 /fonts/type1/public/pl/plmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/
 pl/plr12.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plsy10.pfb>
-Output written on document.pdf (17 pages, 82453 bytes).
+Output written on document.pdf (20 pages, 101650 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 91 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
