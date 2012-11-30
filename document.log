@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.3.21)  28 NOV 2012 21:38
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.3.21)  30 NOV 2012 11:26
 entering extended mode
  Source specials enabled.
  %&-line parsing enabled.
@@ -321,11 +321,7 @@ File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 ) (./document.aux
-(./dziedzina.aux) (./technologie.aux
-
-LaTeX Warning: Label `RozporzadzenieFaktury' multiply defined.
-
-))
+(./dziedzina.aux) (./technologie.aux) (./analiza.aux))
 \openout1 = `document.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
@@ -342,7 +338,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
- (/usr/share/texmf/tex/context/base/supp-pdf.mkii
+
+(/usr/share/texmf/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count88
 \scratchdimen=\dimen105
@@ -434,28 +431,32 @@ Overfull \hbox (10.23196pt too wide) in paragraph at lines 188--191
 -na-micz-nych stron WWW.
  []
 
-[18] [19]) [20] (./document.aux (./dziedzina.aux) (./technologie.aux))
+[18] [19]) [20]
+\openout2 = `analiza.aux'.
 
-LaTeX Warning: There were multiply-defined labels.
+ (./analiza.tex [21
 
- ) 
+
+]) [22] (./document.aux (./dziedzina.aux)
+(./technologie.aux) (./analiza.aux)) ) 
 Here is how much of TeX's memory you used:
- 1377 strings out of 493848
- 16837 string characters out of 1152823
- 72181 words of memory out of 3000000
- 4648 multiletter control sequences out of 15000+50000
+ 1385 strings out of 493848
+ 16926 string characters out of 1152823
+ 72379 words of memory out of 3000000
+ 4649 multiletter control sequences out of 15000+50000
  10387 words of font info for 31 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  25i,8n,24p,306b,214s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/pl/plms.enc}{/usr/share/texmf-texli
-ve/fonts/enc/dvips/pl/plmi.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/pl/plr
-m.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/share/texmf-texlive/fonts/type1/public/pl/plbx12.pfb></usr/share/texmf-texlive
-/fonts/type1/public/pl/plmi12.pfb></usr/share/texmf-texlive/fonts/type1/public/
-pl/plr12.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plsy10.pfb>
-Output written on document.pdf (20 pages, 101650 bytes).
+{/usr/share/texmf-texlive/fonts/enc/dvips
+/pl/plms.enc}{/usr/share/texmf-texlive/fonts/enc/dvips/pl/plmi.enc}{/usr/share/
+texmf-texlive/fonts/enc/dvips/pl/plrm.enc}</usr/share/texmf-texlive/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/
+plbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/pl/plmi12.pfb></usr/sha
+re/texmf-texlive/fonts/type1/public/pl/plr12.pfb></usr/share/texmf-texlive/font
+s/type1/public/pl/plsy10.pfb>
+Output written on document.pdf (22 pages, 106006 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
+ 97 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

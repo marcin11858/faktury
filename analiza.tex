@@ -1,0 +1,50 @@
+\section{Analiza}
+Aplikacja służąca do wystawiania takich dokumentów jak faktura powinna również dawać możliwość 
+pełnego zarządzania właśnie nimi. Urzytkownik oprócz wystawienie powinien móc również dokonac późniejszej
+edycji czy usunięcia faktury wystwionej omyłkowo. Aplikacja będzie dawać możliwość wystwiania kilki rodzai
+faktur m.in. faktur VAT, faktur VAT marża, korekt, duplikatów dokumentów.
+\subsection{Użytkownicy}
+
+\subsection{Aktorzy}
+\begin{itemize}
+  \item Użytkownik - Ma możliwość wystwiania faktur oraz zarządzania nimi. Aplikacja umożliwia mu również
+  zarządzanie płatnościami dkononanymi przez klienta. Będzie mógł równiez dodawać, edytować bądź usuwać 
+  klientów z bazy danych. Będzie miał możliwość zarządzania asortymentem dostępnym do sprzedaży. 
+  \item Administrator - Oprócz funkcji dostępnych dla użytkownika administrtor może rownież zarządzać
+  użytkownikami w systmie.
+\end{itemize}
+\subsection{Przypadki użycia}
+\subsection{Podziała na moduły}
+\subsection{Wykorzystanie wybranych technologii w aplikacji}
+Aplikacja służąca do wystawiania faktur będzie wykorzystywała klika z dostępnych technologii.
+W kolejnych podrozdziałach opiszę w jakim stopniu te technologie będą wykorzystywane.
+\subsubsection{Ajax}
+Ajax będzie wykorzystywany na trzy różne sposoby:
+\begin{itemize}
+  \item dynaimiczne tworzenie menu - menu jest tworzone w zależności od dostępnych opcji. W momencie wciśnięcia
+  przez użytkownika przycisku menu do serwera wysyłane jest zapytanie o dostępne opcje, a następnie menu 
+   jest wyświetlane w oknie przeglądarki.
+  
+  \item dynamiczne tworzenie listy dostępnych możliwości - użytkownik będzie mógł wyszukiwać znajdujących 
+  się w bazie danych elementów takich jak klienci, towary czy usługi za pomocą dynamicznego szukania.
+  Po wpisaniu części intesującego użytkownika elementu będą wyświetlane wszystkie dostępne opcje.
+  \item Zmiany na stronie nie wymagające przeładowania całej strony - Po wybraniu przez użytkownika interesującego
+   elementu nie będzie pobierana z serwera cała strona, a jedynie odpowiedź o powodzeniu wykonania operacji,
+   tym samym będzie wprowadzona modyfikacja niezbędnych elemenentow na stronie.
+\end{itemize}
+\subsubsection{Dojo}
+Biblioteka ta posiada zbiór wielu ciekawych kontrolek oraz umożliwia wprowadzanie zmian na stronie poprzez 
+dostęp do elementów DOM strony. W swojej aplikacji z pewnością urzyję tych możliwości a także menu kontekstowe
+i wyskakujące okienka będą wykonane z pomocą tej biblioteki.
+\subsubsection{ObjectLedge}
+Szkielet aplikacyjny który umożliwi stworzenie alikacji od podstaw zostaną wykorzysten możliwości dotyczące 
+modułu security, w ten sposób będzie zrealizowana autoryzacja oraz możliwości zarzadzania użytkownikami w 
+systemie.
+\subsubsection{Hibernate}
+Będzie wykorzystana do mapowania obiektowo relacyjnego, dzięki temu w aplikacji nie będzie konieczności 
+odwoływania się do bezpośrednio do bazy danych w sposób relacyjny, a odwołana do bazy danych będą bardziej 
+obiektowe niż miałoby to miejsce w przypadku bezpośredniego odwolania od bazy danych.
+\subsubsection{JQuery}
+Dzięki tej bibilotece w aplikacji będzie można umieścić kilka ciekawych kontrolek dzięki czemu 
+aplikacja będzie wyglądać atrakcyjniej i mam nadzieje będzie bardzie przyjazna dla użytkownika.
+
